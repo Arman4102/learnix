@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Learnix</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar-main">
+      <div class="navbar-item">
+        <img src="/asset/Learnix.png" alt="">
+        <div class="navbar-content">
+          <a href="#">Dashboard</a>
+          <a href="#">Komunitas</a>
+          <a href="#">Bantuan</a>
+        </div>
+        <div id="menuToggle" style="background-color: transparent;">
+          <button class="menu" aria-label="Main Menu" aria-expanded="false">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="nav-menu">
+      <div class="container">
+        <a href="#hero"><button>Home</button></a>
+        <a href="#about-us"><button>Alasan</button></a>
+        <a href="#features"><button>Fitur</button></a>
+        <a href="#testimonials"><button>Testimoni</button></a>
+        <a href="#form"><button>Form</button></a>
+      </div>
+    </section>
+    <section id="hero" class="hero">
+      <div class="hero-left fade-in">
+        <h1>Aktifkan Potensi Siswa di Kelas</h1>
+        <p>Aktif Maksimal dengan Metode yang Menyenangkan</p>
+      </div>
+      <div class="hero-center fade-in">
+        <img src="asset/pelajar.png" alt="Ilustrasi Siswa Terlibat" class="hero-image" />
+      </div>
+      <div class="hero-right fade-in">
+        <p>
+          Solusi inovatif yang kami tawarkan bertujuan meningkatkan
+          keterlibatan siswa di kelas, mendorong motivasi belajar, dan
+          menciptakan pembelajaran yang lebih hidup dan
+          menyenangkan.
+        </p>
+      </div>
+    </section>
+    <section id="about-us" class="about-us fade-in">
+      <div class="container">
+        <div class="about-left fade-in">
+          <h2>Mengapa Kami Ada</h2>
+          <p>Kami ada untuk meningkatkan keterlibatan siswa di kelas dengan menyediakan cara/metode pembelajaran yang
+            interaktif dan menyenangkan. Tujuan kami adalah membantu siswa mencapai potensi maksimal mereka melalui
+            pendekatan inovatif yang sesuai dengan keinginan mereka.</p>
+        </div>
+        <div class="about-right fade-in">
+          <img src="https://guruinovatif.s3.ap-southeast-1.amazonaws.com/7497/Untitled-design-%2821%29.png"
+            alt="Tentang Kami">
+        </div>
+      </div>
+    </section>
+    <section class="join">
+      <div class="container fade-in">
+        <h1>Bergabung dengan Komunitas Kami</h1>
+        <p>Gabung dengan komunitas yang berfokus pada peningkatan keterlibatan siswa dan metode pembelajaran yang
+          inovatif.</p>
+        <a href="#form"><button>Gabung Sekarang!</button></a>
+      </div>
+      <div id="features" class="features">
+        <div class="container">
+          <h2 class="fade-in">Solusi Kami untuk Meningkatkan Keterlibatan Siswa</h2>
+          <div class="filter fade-in">
+            <button class="category-btn" data-category="pembelajaran"><i class="bi bi-book"></i> Pembelajaran</button>
+            <button class="category-btn" data-category="evaluasi"><i class="bi bi-pie-chart"></i> Evaluasi</button>
+            <button class="category-btn" data-category="semua"><i class="bi bi-sliders2"></i> Semua</button>
+            <button class="category-btn" data-category="kolaborasi"><i class="bi bi-people"></i> Kolaborasi</button>
+            <button class="category-btn" data-category="keterampilan"><i class="bi bi-trophy"></i> Keterampilan</button>
+          </div>
+          <div class="features-grid fade-in">
+            <div class="feature-item pembelajaran">
+              <i class="bi bi-person-video"></i>
+              <h3>Pembelajaran<br>Interaktif</h3>
+              <p>Mendorong siswa untuk terlibat secara aktif melalui metode pembelajaran berbasis proyek dan diskusi
+                kelompok serta metode lainnya.</p>
+            </div>
+            <div class="feature-item evaluasi">
+              <i class="bi bi-bar-chart-line"></i>
+              <h3>Analisis Kinerja<br>Siswa</h3>
+              <p>Memberikan laporan perkembangan dan analisis performa siswa secara real-time, membantu guru memantau
+                kemajuan mereka.</p>
+            </div>
+            <div class="feature-item kolaborasi">
+              <i class="bi bi-chat-dots"></i>
+              <h3>Feedback<br>Langsung</h3>
+              <p>Siswa bisa mendapatkan umpan balik secara instan dari guru, memungkinkan perbaikan dan pemahaman yang
+                lebih cepat.</p>
+            </div>
+            <div class="feature-item keterampilan">
+              <i class="bi bi-trophy"></i>
+              <h3>Gamifikasi Pembelajaran</h3>
+              <p>Menambah elemen permainan dalam pelajaran untuk meningkatkan motivasi dan membuat proses belajar lebih
+                menyenangkan.</p>
+            </div>
+            <div class="feature-item pembelajaran">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+            <div class="feature-item evaluasi">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+            <div class="feature-item kolaborasi">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+            <div class="feature-item pembelajaran">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+            <div class="feature-item kolaborasi">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+            <div class="feature-item keterampilan">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+            <div class="feature-item evaluasi">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+            <div class="feature-item keterampilan">
+              <i class="bi bi-patch-question"></i>
+              <h3>Lorem<br>Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia molestias soluta commodi natus
+                similique, quidem, iste cum eligendi.</p>
+            </div>
+
+          </div>
+          <div class="pagination fade-in">
+            <button class="prev" onclick="prevPage()"><i class="bi bi-chevron-left"></i></button>
+            <span id="pageNumber">Page 1</span>
+            <button class="next" onclick="nextPage()"><i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="testimonials">
+      <div class="container fade-in">
+        <h2>Apa Kata Mereka?</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-item">
+            <img src="https://img.freepik.com/premium-photo/elementary-school-asian-girl-finds-interesting-idea-isolated-white-background_378229-2125.jpg?w=900" alt="testimoni anak sd">
+            <h4>Siswa A</h4>
+            <p>Keren bingitz</p>
+          </div>
+          <div class="testimonial-item">
+            <img src="https://img.freepik.com/premium-photo/indonesian-school-teacher-smiling-happy-while-holding-book_524151-2588.jpg?w=826" alt="testimoni guru">
+            <h4>Guru B</h4>
+            <p>Sangat membantu perkembangan siswa</p>
+          </div>
+          <div class="testimonial-item">
+            <img src="https://img.freepik.com/premium-photo/portrait-young-man-standing-against-white-background_1048944-2648778.jpg?w=826" alt="testimoni staff">
+            <h4>Admin Sekolah C</h4>
+            <p>Mempermudah melihat interaksi siswa dan guru</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="form" class="registration-section">
+      <div class="marquee-demo fade-in">
+        <div class="marquee">
+          <div class="review-card">
+            <img class="avatar" src="https://images.playground.com/44f5d22ae37144798acf6699a7baf59e.jpeg" alt="Miftah" />
+            <div class="info">
+              <figcaption>Miftah</figcaption>
+              <p>@Miftah</p>
+            </div>
+            <blockquote>Lorem ipsum dolor sit amet consec tetur adipisicing elit.</blockquote>
+          </div>
+          <div class="review-card">
+            <img class="avatar" src="https://images.playground.com/44f5d22ae37144798acf6699a7baf59e.jpeg" alt="Miftah" />
+            <div class="info">
+              <figcaption>Miftah</figcaption>
+              <p>@Miftah</p>
+            </div>
+            <blockquote>Lorem ipsum dolor sit amet consec tetur adipisicing elit.</blockquote>
+          </div>
+          <div class="review-card">
+            <img class="avatar" src="https://images.playground.com/44f5d22ae37144798acf6699a7baf59e.jpeg" alt="Miftah" />
+            <div class="info">
+              <figcaption>Miftah</figcaption>
+              <p>@Miftah</p>
+            </div>
+            <blockquote>Lorem ipsum dolor sit amet consec tetur adipisicing elit.</blockquote>
+          </div>
+        </div>
+
+        <div class="marquee reverse">
+          <div class="review-card">
+            <img class="avatar" src="https://images.playground.com/44f5d22ae37144798acf6699a7baf59e.jpeg" alt="Miftah" />
+            <div class="info">
+              <figcaption>Miftah</figcaption>
+              <p>@Miftah</p>
+            </div>
+            <blockquote>Lorem ipsum dolor sit amet consec tetur adipisicing elit.</blockquote>
+          </div>
+          <div class="review-card">
+            <img class="avatar" src="https://images.playground.com/44f5d22ae37144798acf6699a7baf59e.jpeg" alt="Miftah" />
+            <div class="info">
+              <figcaption>Miftah</figcaption>
+              <p>@Miftah</p>
+            </div>
+            <blockquote>Lorem ipsum dolor sit amet consec tetur adipisicing elit.</blockquote>
+          </div>
+          <div class="review-card">
+            <img class="avatar" src="https://images.playground.com/44f5d22ae37144798acf6699a7baf59e.jpeg" alt="Miftah" />
+            <div class="info">
+              <figcaption>Miftah</figcaption>
+              <p>@Miftah</p>
+            </div>
+            <blockquote>Lorem ipsum dolor sit amet consec tetur adipisicing elit.</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="container fade-in">
+        <div class="form-container">
+          <form action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group floating-label">
+                <input type="text" id="name" name="name" placeholder="Masukan Nama Lengkap Anda" required>
+                <label for="name">Nama Lengkap:</label>
+              </div>
+              <div class="form-group floating-label">
+                <input type="text" id="kota" name="kota" placeholder="Contoh: Jakarta" required>
+                <label for="kota">Kota:</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group floating-label">
+                <input type="email" id="email" name="email" placeholder="Masukan Email Aktif Anda" required>
+                <label for="email">Alamat Email:</label>
+              </div>
+              <div class="form-group floating-label">
+                <input type="text" id="sekolah" name="sekolah" placeholder="Contoh: SMKN 53 Jakarta" required>
+                <label for="sekolah">Asal Sekolah:</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group floating-label">
+                <select id="status" name="status" required>
+                  <option value="" disabled selected></option>
+                  <option value="pelajar">Pelajar</option>
+                  <option value="guru">Guru</option>
+                  <option value="staff">Staff</option>
+                </select>
+                <label for="status">Status:</label>
+              </div>
+              <div class="form-group floating-label">
+                <select id="jenjang" name="jenjang" required>
+                  <option value="" disabled selected></option>
+                  <option value="sd">SD</option>
+                  <option value="smp">SMP</option>
+                  <option value="sma">SMA</option>
+                </select>
+                <label for="jenjang">Jenjang:</label>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Bergabung Sekarang!</button>
+          </form>
+        </div>
+        <div class="text-container">
+          <h2>Mulai Perjalanan Menuju Potensi Maksimal Kamu!</h2>
+          <p>Bergabung dengan komunitas kami untuk mencapai kegiatan belajar yang memaksimalkan potensi siswa</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container fade-in">
+      <div class="left">
+        <img alt="Company Logo" height="50" src="/asset/Learnix.png" width="50" />
+        <h2>
+          Learnix
+        </h2>
+        <p>
+          SMKN 53 Jakarta
+        </p>
+        <p>
+          Jl. Rusun Flamboyan, RT.14/RW.10, Cengkareng Bar., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus
+          Ibukota Jakarta 11730
+        </p>
+        <a href="https://maps.app.goo.gl/LgMfoQmQ44tYVJV77" target="_blank">
+          Lihat di Google Maps
+        </a>
+        <p>
+          <i class="fas fa-envelope">
+          </i>
+          info@www.smkn53jkt.sch.id
+        </p>
+        <p>
+          <i class="fas fa-phone">
+          </i>
+          02129511482
+        </p>
+      </div>
+      <div class="right">
+        <div>
+          <h3>
+            Learnix
+          </h3>
+          <ul>
+            <li>
+              <a href="#">
+                Tentang Kami
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Partner
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Komunitas
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            Layanan
+          </h3>
+          <ul>
+            <li>
+              <a href="#">
+                Kelas
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Beasiswa
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Teman
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                SkilUp
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Webinar
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            Bantuan dan Panduan
+          </h3>
+          <ul>
+            <li>
+              <a href="#">
+                Syarat dan Ketentuan
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Kebijakan Privasi
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Bantuan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>
+        ©2024 All Right Reserved 
+      </p>
+      <div class="social-icons">
+        <a href="#">
+          <i class="bi bi-instagram"></i>
+          </i>
+        </a>
+        <a href="#">
+          <i class="bi bi-facebook"></i>
+          </i>
+        </a>
+        <a href="#">
+          <i class="fab fa-linkedin">
+          </i>
+        </a>
+        <a href="#">
+          <i class="bi bi-whatsapp"></i>
+          </i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
