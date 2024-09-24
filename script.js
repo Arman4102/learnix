@@ -94,3 +94,53 @@ document.querySelectorAll('.category-btn').forEach(button => {
 });
 
 showPage(currentPage, filteredItems);
+
+//form
+function handleGetFormData() {
+  return {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    city: document.getElementById('city').value,
+    zipCode: document.getElementById('zip-code').value,
+    status: document.getElementById('status').checked
+  };
+}
+
+function isNumber(str) {
+  return !isNaN(str);
+}
+
+function checkboxIsChecked() {
+  return document.getElementById('status').checked;
+}
+
+function validateFormData(formData) {
+  return formData !== null &&
+         isNumber(formData.zipCode) &&
+         checkboxIsChecked();
+}
+
+function submit() {
+  console.log("ke submit");
+  const data = handleGetFormData();
+  const checkValid = validateFormData(data);
+  console.log("check", checkValid);
+  const errEl = document.getElementById("warning");
+
+  if (!checkValid) {
+      errEl.innerHTML = "Periksa form anda sekali lagi";
+      errEl.style.opacity = '1'
+  } else {
+      errEl.innerHTML = "";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  function logSubmit(event) {
+    event.preventDefault(); 
+    submit();
+  }
+
+  const form = document.getElementById("form");
+  form.addEventListener("submit", logSubmit);
+});

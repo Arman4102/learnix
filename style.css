@@ -630,19 +630,19 @@ blockquote {
 
 @keyframes marquee {
   from {
-    transform: translateX(110%);
+    transform: translateX(120%);
   }
   to {
-    transform: translateX(-110%);
+    transform: translateX(-120%);
   }
 }
 
 @keyframes marquee-reverse {
   from {
-    transform: translateX(-110%);
+    transform: translateX(-120%);
   }
   to {
-    transform: translateX(110%);
+    transform: translateX(120%);
   }
 }
 
@@ -655,91 +655,97 @@ blockquote {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 25px;
   width: 85%;
-  padding: 60px 0;
+  padding: 20px 0;
   margin: 0 auto;
 }
 
+/* Mengatur tampilan form-container */
 .form-container {
-  flex: 1;
   order: 1;
-  align-items: center;
-  margin-right: 20px;
-  padding: 0 40px;
-  border-radius: 8px;
+  max-width: 500px;
+  /* margin: 20px auto; */
+  padding: 0 30px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px);
 }
 
-.form-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+#status {
+  margin-right: 10px;
+  width: 30%;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
-.form-group {
-  flex: 1;
-  position: relative;
-  margin: 10px 20px 0 0;
-}
 
-.form-group:last-child {
-  margin-right: 0;
-}
-
-/* Floating label */
-.floating-label input,
-.floating-label select {
-  width: 100%;
-  padding: 10px 5px;
-  appearance: none;
+ #name, #city, #email, #zip-code  {
+  width: 90%; 
+  padding: 12px 15px; 
+  margin: 10px 0;
   border: 1px solid #ccc;
-  background-color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 16px;
   outline: none;
-  font-size: 16px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease; 
 }
 
-
-
-.floating-label label {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  /* background-color: white; */
-  padding: 0 5px;
-  font-size: 16px;
-  color: #aaa;
-  pointer-events: none;
-  transition: 0.3s ease all;
-}
-
-.floating-label input::placeholder {
-  position: absolute;
-  color: transparent;
-  font-size: small;
-  left: 5px;
-  transition: color 0.3s ease;
-}
-
-.floating-label input:focus::placeholder {
-  color: #aaa;
-}
-
-.floating-label input:focus + label,
-.floating-label input:not(:placeholder-shown) + label,
-.floating-label select:focus + label,
-.floating-label select:valid + label {
-  top: 0;
-  left: 0px;
-  transform: translateY(-120%);
-  font-size: 16px;
-  color: #007bff;
-}
-
-.floating-label input:focus,
-.floating-label select:focus {
+#y input:focus {
   border-color: #007bff;
 }
+
+#check {
+  float: inline-start;
+  font-size: 14px;
+  color: #333;
+  margin-top: 20px;
+  width: 80%;
+  display: inline;
+}
+
+
+#status {
+  display: flex;
+  margin-right: 10px;
+  margin-top: 35px;
+  width: 20%;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#submit-form {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#submit-form:hover {
+  background-color: #0056b3;
+}
+
+/* warning */
+#warning {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+  opacity: 0;
+}
+
+
+
+body {
+  background-size: cover; 
+  background-position: center;
+}
+
+
 
 .submit-btn {
   width: 100%;

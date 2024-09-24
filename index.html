@@ -13,11 +13,11 @@
   <nav>
     <div class="navbar-main">
       <div class="navbar-item">
-        <img src="/asset/Learnix.png" alt="">
+        <img src="https://skilvul-sage.vercel.app/asset/Learnix.png" alt="Learnix Logo">
         <div class="navbar-content">
-          <a href="#">Dashboard</a>
-          <a href="#">Komunitas</a>
-          <a href="#">Bantuan</a>
+          <a id="link" href="https://skilvul.com">Dashboard</a>
+          <a href="https://skilvul.com">Komunitas</a>
+          <a href="https://skilvul.com">Bantuan</a>
         </div>
         <div id="menuToggle" style="background-color: transparent;">
           <button class="menu" aria-label="Main Menu" aria-expanded="false">
@@ -50,10 +50,10 @@
         <p>Aktif Maksimal dengan Metode yang Menyenangkan</p>
       </div>
       <div class="hero-center fade-in">
-        <img src="asset/pelajar.png" alt="Ilustrasi Siswa Terlibat" class="hero-image" />
+        <img src="https://skilvul-sage.vercel.app/asset/pelajar.png" alt="Ilustrasi Siswa Terlibat" class="hero-image" />
       </div>
       <div class="hero-right fade-in">
-        <p>
+        <p id="description">
           Solusi inovatif yang kami tawarkan bertujuan meningkatkan
           keterlibatan siswa di kelas, mendorong motivasi belajar, dan
           menciptakan pembelajaran yang lebih hidup dan
@@ -256,52 +256,18 @@
 
       <div class="container fade-in">
         <div class="form-container">
-          <form action="#" method="POST">
-            <div class="form-row">
-              <div class="form-group floating-label">
-                <input type="text" id="name" name="name" placeholder="Masukan Nama Lengkap Anda" required>
-                <label for="name">Nama Lengkap:</label>
-              </div>
-              <div class="form-group floating-label">
-                <input type="text" id="kota" name="kota" placeholder="Contoh: Jakarta" required>
-                <label for="kota">Kota:</label>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group floating-label">
-                <input type="email" id="email" name="email" placeholder="Masukan Email Aktif Anda" required>
-                <label for="email">Alamat Email:</label>
-              </div>
-              <div class="form-group floating-label">
-                <input type="text" id="sekolah" name="sekolah" placeholder="Contoh: SMKN 53 Jakarta" required>
-                <label for="sekolah">Asal Sekolah:</label>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group floating-label">
-                <select id="status" name="status" required>
-                  <option value="" disabled selected></option>
-                  <option value="pelajar">Pelajar</option>
-                  <option value="guru">Guru</option>
-                  <option value="staff">Staff</option>
-                </select>
-                <label for="status">Status:</label>
-              </div>
-              <div class="form-group floating-label">
-                <select id="jenjang" name="jenjang" required>
-                  <option value="" disabled selected></option>
-                  <option value="sd">SD</option>
-                  <option value="smp">SMP</option>
-                  <option value="sma">SMA</option>
-                </select>
-                <label for="jenjang">Jenjang:</label>
-              </div>
-            </div>
-
-            <button type="submit" class="submit-btn">Bergabung Sekarang!</button>
-          </form>
+          <form id="y">
+            <div id="warning"></div>
+            <input id="name" type="text" placeholder="Masukan Nama Lengkap:">
+            <input id="city" type="text" placeholder="Masukan Asal Kota Anda:">
+            <input id="email" type="email" placeholder="Masukan Email Aktif Anda:">
+            <input id="zip-code" type="number" placeholder="Masukan Kode Pos Anda:">
+            <label id="check" name="status">Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai</label>
+            <input id="status" type="checkbox">
+             <button type="submit" id="submit-form">Submit</button>
+           
+        </form>
+        <!-- <div id="form-container"></div> -->
         </div>
         <div class="text-container">
           <h2>Mulai Perjalanan Menuju Potensi Maksimal Kamu!</h2>
@@ -313,7 +279,7 @@
   <footer>
     <div class="container fade-in">
       <div class="left">
-        <img alt="Company Logo" height="50" src="/asset/Learnix.png" width="50" />
+        <img alt="Learnix Logo" height="50" src="/asset/Learnix.png" width="50" />
         <h2>
           Learnix
         </h2>
@@ -441,7 +407,7 @@
       </div>
     </div>
   </footer>
-  <script src="main.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
