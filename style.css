@@ -18,6 +18,7 @@
 body {
   height: auto;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 html {
@@ -66,13 +67,13 @@ nav {
   justify-content: center;
   align-items: center;
   position: sticky;
+  top: 2.8em;
   height: 0;
   width: 100vw;
-  z-index: 3;
-  top: 6vh;
-  
-  margin: auto auto;
+  z-index: 4;
+  margin: auto 0; /* Pastikan margin juga diatur dengan benar */
 }
+
 
 .navbar-main {
   display: flex;
@@ -176,7 +177,7 @@ nav a {
 .nav-menu {
   display: flex;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -253,6 +254,30 @@ nav a {
   transition: all 0.2s ease;
 }
 
+.progress {
+  position: fixed;
+  z-index: 2;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  color: #001a2e;
+}
 
 main .hero {
   height: 100vh;
@@ -260,8 +285,10 @@ main .hero {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  /* background-color: url('asset/background-hero.png') no-repeat center center; */
-  background-color: #2b5c97;
+  /* background: url('asset/background-hero.png') no-repeat center center; */
+  /* background: url('https://img.freepik.com/free-photo/school-children-classroom-lesson_155003-3791.jpg?t=st=1729392331~exp=1729395931~hmac=8a507a20f1602b5bfc84ea93ee18782abee56bc039ccc2c553eeeb1699897997&w=826') no-repeat center center; */
+  background: linear-gradient( #2b5c97, #2b5c97, #f9f9f9);
+  /* background: #2b5c97; */
   background-size: cover;
   color: #fff;
   position: relative;
@@ -569,7 +596,7 @@ main .hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  /* overflow-x: visible; */
   border-radius: 8px;
   /* border: 1px solid #e0e0e0; */
   background: transparent; 
@@ -656,7 +683,7 @@ blockquote {
   border-radius: 25px;
   width: 85%;
   padding: 20px 0;
-  margin: 0 auto;
+  margin: 50px 0 auto;
 }
 
 /* Mengatur tampilan form-container */
@@ -732,20 +759,18 @@ blockquote {
 
 /* warning */
 #warning {
+  display: none;
   margin-top: 10px;
   color: red;
   font-weight: bold;
   opacity: 0;
 }
 
-
-
-body {
-  background-size: cover; 
-  background-position: center;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
-
 
 .submit-btn {
   width: 100%;

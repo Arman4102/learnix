@@ -44,6 +44,9 @@
         <a href="#form"><button>Form</button></a>
       </div>
     </section>
+    <div class="progress fade-in">
+      <span class="progress-value">&#x1F815;</span>
+    </div>
     <section id="hero" class="hero">
       <div class="hero-left fade-in">
         <h1>Aktifkan Potensi Siswa di Kelas</h1>
@@ -86,9 +89,9 @@
         <div class="container">
           <h2 class="fade-in">Solusi Kami untuk Meningkatkan Keterlibatan Siswa</h2>
           <div class="filter fade-in">
+            <button class="category-btn" data-category="semua"><i class="bi bi-sliders2"></i> Semua</button>
             <button class="category-btn" data-category="pembelajaran"><i class="bi bi-book"></i> Pembelajaran</button>
             <button class="category-btn" data-category="evaluasi"><i class="bi bi-pie-chart"></i> Evaluasi</button>
-            <button class="category-btn" data-category="semua"><i class="bi bi-sliders2"></i> Semua</button>
             <button class="category-btn" data-category="kolaborasi"><i class="bi bi-people"></i> Kolaborasi</button>
             <button class="category-btn" data-category="keterampilan"><i class="bi bi-trophy"></i> Keterampilan</button>
           </div>
@@ -256,14 +259,14 @@
 
       <div class="container fade-in">
         <div class="form-container">
-          <form id="y">
+          <form id="form">
             <div id="warning"></div>
-            <input id="name" type="text" placeholder="Masukan Nama Lengkap:">
-            <input id="city" type="text" placeholder="Masukan Asal Kota Anda:">
-            <input id="email" type="email" placeholder="Masukan Email Aktif Anda:">
-            <input id="zip-code" type="number" placeholder="Masukan Kode Pos Anda:">
-            <label id="check" name="status">Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai</label>
-            <input id="status" type="checkbox">
+            <input id="name" type="text" placeholder="Masukan Nama Lengkap:" required>
+            <input id="city" type="text" placeholder="Masukan Asal Kota Anda:" required>
+            <input id="email" type="email" placeholder="Masukan Email Aktif Anda:" required>
+            <input id="zip-code" type="number" placeholder="Masukan Kode Pos Anda:" required>
+            <label id="check" for="status" name="status">Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai</label>
+            <input id="status" type="checkbox" name="status">
              <button type="submit" id="submit-form">Submit</button>
            
         </form>
