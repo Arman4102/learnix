@@ -71,7 +71,8 @@ nav {
   height: 0;
   width: 100vw;
   z-index: 4;
-  margin: auto 0; /* Pastikan margin juga diatur dengan benar */
+  margin: auto 0;
+  transition: 0.5s;
 }
 
 

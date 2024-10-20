@@ -97,9 +97,12 @@ document.querySelectorAll(".category-btn").forEach((button) => {
 
 showPage(currentPage, filteredItems);
 
+let lastScroll = 0
+
+
 let calcScrollValue = () => {
   let scrollProgress = document.querySelector(".progress");
-  let progressValue = document.querySelector(".progress-value");
+  // let progressValue = document.querySelector(".progress-value");
   let pos = document.documentElement.scrollTop;
   // console.log(pos)
   let calcHeight =
@@ -120,6 +123,22 @@ let calcScrollValue = () => {
   });
 
   scrollProgress.style.background = `conic-gradient(#1ab92da5 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+
+  let nav = document.querySelector("nav");
+  let scrollTop = window.scrollY || pos
+  if(scrollValue <= 5){
+    nav.style.top = '2.8em'
+    // console.log('Apa');
+  } else if(scrollTop > lastScroll) {
+    nav.style.top = '-3em'
+    // console.log(lastScroll);
+  }
+  else {
+    nav.style.top = '2.8em'
+  }
+  lastScroll = scrollTop
+  // console.log(`scroll top = ${scrollTop} last scroll = ${lastScroll}`);
+
 };
 
 window.onscroll = calcScrollValue;
