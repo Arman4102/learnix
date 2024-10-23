@@ -97,8 +97,7 @@ document.querySelectorAll(".category-btn").forEach((button) => {
 
 showPage(currentPage, filteredItems);
 
-let lastScroll = 0
-
+let lastScroll = 0;
 
 let calcScrollValue = () => {
   let scrollProgress = document.querySelector(".progress");
@@ -114,8 +113,7 @@ let calcScrollValue = () => {
   if (pos > 100) {
     scrollProgress.style.display = "grid";
     scrollProgress.classList.add("visible");
-  } 
-  else {
+  } else {
     scrollProgress.classList.remove("visible");
   }
   scrollProgress.addEventListener("click", () => {
@@ -125,24 +123,26 @@ let calcScrollValue = () => {
   scrollProgress.style.background = `conic-gradient(#1ab92da5 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 
   let nav = document.querySelector("nav");
-  let scrollTop = window.scrollY || pos
-  if(scrollValue <= 5){
-    nav.style.top = '2.8em'
+  let scrollTop = window.scrollY || pos;
+  if (scrollValue <= 5) {
+    nav.style.top = "2.8em";
     // console.log('Apa');
-  } else if(scrollTop > lastScroll) {
-    nav.style.top = '-3em'
+  } else if (scrollTop > lastScroll) {
+    nav.style.top = "-3em";
     // console.log(lastScroll);
+  } else {
+    nav.style.top = "2.8em";
   }
-  else {
-    nav.style.top = '2.8em'
-  }
-  lastScroll = scrollTop
+  lastScroll = scrollTop;
   // console.log(`scroll top = ${scrollTop} last scroll = ${lastScroll}`);
-
 };
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+function trimCheck(value) {
+  return value.trim() !== "";
+}
 
 //form
 function handleGetFormData() {
@@ -156,6 +156,7 @@ function handleGetFormData() {
 }
 
 function isNumber(str) {
+  // return trimCheck(str) && !isNaN(str);
   return !isNaN(str);
 }
 
@@ -167,22 +168,42 @@ function validateFormData(formData) {
   return formData !== null && isNumber(formData.zipCode) && checkboxIsChecked();
 }
 
+const cusError = document.querySelector(".alert-warning");
+const cusSuccess = document.querySelector(".alert-success");
+
 function submit() {
   const data = handleGetFormData();
   const checkValid = validateFormData(data);
+  console.log(data);
+  console.log(isNumber(data.zipCode));
   console.log("check", checkValid);
-  const errEl = document.getElementById("warning");
+  // const errEl = document.getElementById("warning");
 
   if (!checkValid) {
-    errEl.innerHTML = "Periksa form anda sekali lagi";
-    errEl.style.opacity = "1";
-    console.log(data);
-    alert("Periksa kembali form anda!");
+    // errEl.innerHTML = "Periksa form anda sekali lagi";
+    // errEl.style.opacity = "1";
+    // alert("Periksa kembali form anda!");
+    cusError.classList.add("show");
+    cusError.classList.remove("hide");
+    cusError.classList.add("showAlert");
+    setTimeout(() => {
+      cusError.classList.remove("show");
+      cusError.classList.add("hide");
+    }, 3000);
   } else {
-    errEl.innerHTML = "";
-    console.log(data);
-    alert("Anda berhasil bergabung!");
-    location.reload();
+    // errEl.innerHTML = "";
+    // console.log(data);
+    // alert("Anda berhasil bergabung!");
+    cusError.classList.remove("show");
+    cusError.classList.add("hide");
+    cusSuccess.classList.add("show");
+    cusSuccess.classList.remove("hide");
+    cusSuccess.classList.add("showAlert");
+    setTimeout(() => {
+      cusSuccess.classList.remove("show");
+      cusSuccess.classList.add("hide");
+      location.replace("https://learnix-skilvul.vercel.app");
+    }, 3000);
   }
 }
 
@@ -195,3 +216,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form");
   form.addEventListener("submit", logSubmit);
 });
+
+const close = document.querySelector(".close-btn");
+if (close) {
+  close.addEventListener("click", () => {
+    cusError.classList.remove("show");
+    cusError.classList.add("hide");
+  });
+}
+
+const success = document.querySelector(".close-success");
+if (success) {
+  success.addEventListener("click", () => {
+    cusSuccess.classList.remove("show");
+    cusSuccess.classList.add("hide");
+  });
+}
