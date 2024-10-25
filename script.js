@@ -171,7 +171,7 @@ function validateFormData(formData) {
 const cusError = document.querySelector(".alert-warning");
 const cusSuccess = document.querySelector(".alert-success");
 
-function submit() {
+function submit() { 
   const data = handleGetFormData();
   const checkValid = validateFormData(data);
   console.log(data);

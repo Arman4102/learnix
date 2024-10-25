@@ -699,7 +699,7 @@ main .hero {
 
 .testimonials {
   padding: 20px 0;
-  background-color: #f8f9fa;
+  background-color: #f5f5f5;
 }
 
 .testimonials .container {
@@ -856,7 +856,6 @@ blockquote {
   margin: 50px 0 auto;
 }
 
-/* Mengatur tampilan form-container */
 .form-container {
   order: 1;
   max-width: 500px;
