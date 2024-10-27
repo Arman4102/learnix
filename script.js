@@ -177,33 +177,33 @@ function submit() {
   console.log(data);
   console.log(isNumber(data.zipCode));
   console.log("check", checkValid);
-  // const errEl = document.getElementById("warning");
+  const errEl = document.getElementById("warning");
 
   if (!checkValid) {
-    // errEl.innerHTML = "Periksa form anda sekali lagi";
-    // errEl.style.opacity = "1";
-    // alert("Periksa kembali form anda!");
-    cusError.classList.add("show");
-    cusError.classList.remove("hide");
-    cusError.classList.add("showAlert");
-    setTimeout(() => {
-      cusError.classList.remove("show");
-      cusError.classList.add("hide");
-    }, 3000);
+    errEl.innerHTML = "Periksa form anda sekali lagi";
+    errEl.style.opacity = "1";
+    alert("Periksa kembali form anda!");
+    // cusError.classList.add("show");
+    // cusError.classList.remove("hide");
+    // cusError.classList.add("showAlert");
+    // setTimeout(() => {
+    //   cusError.classList.remove("show");
+    //   cusError.classList.add("hide");
+    // }, 3000);
   } else {
-    // errEl.innerHTML = "";
-    // console.log(data);
-    // alert("Anda berhasil bergabung!");
-    cusError.classList.remove("show");
-    cusError.classList.add("hide");
-    cusSuccess.classList.add("show");
-    cusSuccess.classList.remove("hide");
-    cusSuccess.classList.add("showAlert");
-    setTimeout(() => {
-      cusSuccess.classList.remove("show");
-      cusSuccess.classList.add("hide");
-      location.replace("https://learnix-skilvul.vercel.app");
-    }, 3000);
+    errEl.innerHTML = "";
+    console.log(data);
+    alert("Anda berhasil bergabung!");
+    // cusError.classList.remove("show");
+    // cusError.classList.add("hide");
+    // cusSuccess.classList.add("show");
+    // cusSuccess.classList.remove("hide");
+    // cusSuccess.classList.add("showAlert");
+    // setTimeout(() => {
+    //   cusSuccess.classList.remove("show");
+    //   cusSuccess.classList.add("hide");
+    //   location.replace("https://learnix-skilvul.vercel.app");
+    // }, 3000);
   }
 }
 
